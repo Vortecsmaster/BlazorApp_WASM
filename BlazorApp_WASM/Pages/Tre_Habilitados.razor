@@ -1,0 +1,67 @@
+﻿@using Modelos
+
+@page "/Tre_Habilitados"
+
+<h3>Gestión de TREs de Privilegios habilitados</h3>
+
+<div class="form-group">
+
+<table class="table">
+        <thead>
+            <tr>
+                <th>Nombres</th>
+                <th></th>
+                <th>Habilitado</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tre_habilitado in tres.tre_habilitados)
+            {
+                <tr>
+                    <td>@tre_habilitado.descripcion</td>
+                    <td></td>
+                    <td>@tre_habilitado.habilitado</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+
+
+
+@code {
+    public Tipos_Tre_Habilitados tres = new Tipos_Tre_Habilitados();
+    
+    protected override void OnInitialized()
+    {
+        
+        tres.tre_habilitados.Add(new Tre_Habilitado {
+            codigo_tipo_tre=55,
+            descripcion = "Servicio a la Ciudadanía - Acreditacion de Cuerpo Diplomatico",
+            habilitado = false });
+         tres.tre_habilitados.Add(new Tre_Habilitado {
+            codigo_tipo_tre=57,
+             descripcion = "Servicio a la Ciudadanía - Acreditaciones Diplomáticas",
+             habilitado = true });
+
+        base.OnInitialized();
+    }
+
+    //protected override Task OnInitializedAsync()
+    //{
+        //tres.tre_habilitados.Add(new Tre_Habilitado {
+        //    codigo_tipo_tre=55,
+        //    descripcion = "Servicio a la Ciudadanía - Acreditacion de Cuerpo Diplomatico",
+        //    habilitado = false });
+        //tres.tre_habilitados.Add(new Tre_Habilitado {
+        //    codigo_tipo_tre=57,
+        //     descripcion = "Servicio a la Ciudadanía - Acreditaciones Diplomáticas",
+        //     habilitado = true });
+        //tres.tre_habilitados.Add(new Tre_Habilitado { 59, "Servicio a la Ciudadanía - Certificaciones",true });
+        //tres.tre_habilitados.Add(new Tre_Habilitado { 60, "Servicio a la Ciudadanía - Permiso de Trabajo",true });
+
+    //    return base.OnInitializedAsync();
+    //}
+    
+}
