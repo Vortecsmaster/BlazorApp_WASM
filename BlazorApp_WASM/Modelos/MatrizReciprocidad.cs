@@ -6,7 +6,7 @@
         public int id_emcori { get; set; }
     }
 
-    public class Matriz_Reciprocidad
+    public class MatrizReciprocidad
     {
         public List<Reciprocidad>? matriz { get; set; }
     }
