@@ -3,9 +3,9 @@
     
     public class TreHabilitado
     {
-        public int codigo_tipo_tre { get; set; }
-        public string? descripcion { get; set; }
-        public bool habilitado { get; set; }
+        public int CodigoTipoTre { get; set; }
+        public string? Descripcion { get; set; }
+        public bool Habilitado { get; set; }
     
     }
     

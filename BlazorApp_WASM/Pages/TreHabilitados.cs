@@ -1,4 +1,4 @@
-﻿using BlazorApp_WASM.Modelos
+﻿using BlazorApp_WASM.Modelos;
 
 namespace BlazorApp_WASM.Pages
 {

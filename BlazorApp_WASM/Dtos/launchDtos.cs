@@ -4,7 +4,7 @@ namespace BlazorApp_WASM.Dtos
 {
     public partial class LaunchDto
     {
-        [JsonPropertyName("codigo_tipo_")]
+        [JsonPropertyName("codigo_tipo_tre")]
         //[JsonConverter(typeof(JsonConverter<string>))]
         public int codigoTipoTre { get; set; }
 
@@ -12,6 +12,6 @@ namespace BlazorApp_WASM.Dtos
         public string? descripcion { get; set; }
 
         [JsonPropertyName("habilitado")]
-        public bool habilitado { get; set; }
+        public int habilitado { get; set; }
     }
 }

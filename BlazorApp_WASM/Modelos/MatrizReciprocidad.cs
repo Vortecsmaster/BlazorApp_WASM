@@ -2,12 +2,12 @@
 {
     public class Reciprocidad
     {
-        public int codigo_tipo_tre { get; set; }
-        public int id_emcori { get; set; }
+        public int CodigoTipoTre { get; set; }
+        public int IdEmcori { get; set; }
     }
 
     public class MatrizReciprocidad
     {
-        public List<Reciprocidad>? matriz { get; set; }
+        public List<Reciprocidad>? Matriz { get; set; }
     }
 }

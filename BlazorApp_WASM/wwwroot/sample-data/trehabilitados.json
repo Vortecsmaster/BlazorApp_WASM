@@ -1,0 +1,27 @@
+﻿[
+  {
+    "codigo_tipo_tre": "55",
+    "descripcion": "Servicio a la Ciudadanía - Acreditacion de Cuerpo Diplomatico1",
+    "habilitado": "0"
+  },
+  {
+    "codigo_tipo_tre": "60",
+    "descripcion": "Servicio a la Ciudadanía - Permiso de Trabajo",
+    "habilitado": "1"
+  },
+  {
+    "codigo_tipo_tre": "70",
+    "descripcion": "Servicio a la Ciudadanía - Exención de Combustible",
+    "habilitado": "1"
+  },
+  {
+    "codigo_tipo_tre": "96",
+    "descripcion": "Servicio a la Ciudadanía - Exencion de Deposito de Arrendamiento",
+    "habilitado": "1"
+  },
+  {
+    "codigo_tipo_tre": "110",
+    "descripcion": "Servicio a la Ciudadanía - Certificaciones de Licencia de Conducir",
+    "habilitado": "1"
+  }
+]

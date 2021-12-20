@@ -1,13 +1,14 @@
 ﻿@page "/fetchdata"
-@inject HttpClient Http
-
+@using BlazorApp_WASM.Dtos
+@*@inject HttpClient Http
+*@
 <PageTitle>Lista de TREs habilitados</PageTitle>
 
 <h1>Lista de TREs habilitados</h1>
 
 <p>Aqui mostrare la data como prueba para el componente final.</p>
 
-@if (forecasts == null)
+@if (dataFromDto == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -16,20 +17,20 @@ else
     <table class="table">
         <thead>
             <tr>
-                <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
+                <th>codigo_tipo_tre</th>
+                <th>Descripción</th>
+                <th>Habilitado?</th>
+                
             </tr>
         </thead>
         <tbody>
-            @foreach (var forecast in forecasts)
+            @foreach (var dto in dataFromDto)
             {
                 <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
+                    <td>@dto.codigoTipoTre</td>
+                    <td>@dto.descripcion</td>
+                    <td>@dto.habilitado</td>
+                    
                 </tr>
             }
         </tbody>
@@ -37,12 +38,6 @@ else
 }
 
 @code {
-    private LaunchDto dataFromDto;
-
-    protected override async Task OnInitializedAsync()
-    {
-        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
-    }
-
+    
     
 }

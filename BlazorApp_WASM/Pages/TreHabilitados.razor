@@ -15,14 +15,14 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var tre_habilitado in tres.tre_habilitados)
+           @* @foreach (var tre_habilitado in tres.tre_habilitados)
             {
                 <tr>
                     <td>@tre_habilitado.descripcion</td>
                     <td></td>
                     <td>@tre_habilitado.habilitado</td>
                 </tr>
-            }
+            }*@
         </tbody>
     </table>
 
@@ -31,5 +31,11 @@
 
 
 @code {
+    //private LaunchDto[] tresHabilitados;
+
+    //protect3d override async Task OnInitializeAsync()
+    //{
+    //    tresHabilitados = await HttpClient.GetFromJsonAsync<LaunchDto[]>()
+    //}
 
 }
