@@ -2,6 +2,7 @@
 using System.Net.Http.Json;
 using System.Threading.Tasks;
 using BlazorApp_WASM.Dtos;
+using BlazorApp_WASM.Services;
 using Microsoft.AspNetCore.Components;
 
 
@@ -9,14 +10,19 @@ namespace BlazorApp_WASM.Pages
 {
     public partial class FetchData
     {
-        private LaunchDto[]? dataFromDto; 
+        private LaunchDto[]? dataFromDto;
 
         [Inject]
-        private HttpClient Http { get; set; }
+        ITresHabilitados tresHabilitados { get; set; }
+
+        //private HttpClient Http { get; set; }
+
 
         protected override async Task OnInitializedAsync()
         {
-            dataFromDto = await Http.GetFromJsonAsync<LaunchDto[]>("sample-data/trehabilitados.json");
+            dataFromDto = tresHabilitados.GetAllTresHabilitados().Result;
+
+            //dataFromDto = await Http.GetFromJsonAsync<LaunchDto[]>("sample-data/trehabilitados.json");
         }
     }
 }
